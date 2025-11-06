@@ -1,38 +1,117 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #100e0e;
+  font-family: "Arial", sans-serif;
+  background-color: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+header {
   text-align: center;
-  padding: 20px;
+  background: #000;
+  color: #fff;
+  padding: 30px 15px;
+  border-bottom: 5px solid #d4af37;
+}
+
+.logo {
+  width: 100px;
 }
 
 h1 {
-  color: #f7f3f3;
+  margin: 10px 0 5px;
+  font-size: 2rem;
 }
 
-.card {
-  background: rgb(246, 244, 244);
-  padding: 15px;
-  margin: 20px auto;
-  max-width: 400px;
+.slogan {
+  font-style: italic;
+  color: #d4af37;
+}
+
+nav {
+  background-color: #111;
+  text-align: center;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #d4af37;
+}
+
+.secao {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border: 2px solid #000;
 }
 
-img {
+.secao h2 {
+  color: #000;
+  border-bottom: 3px solid #d4af37;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+.foto {
+  display: block;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
+  margin-top: 15px;
+  border: 2px solid #000;
 }
 
-button {
-  margin-top: 15px;
+ul li {
+  margin: 8px 0;
+}
+
+.botoes-acessibilidade button {
+  margin: 5px;
   padding: 10px 15px;
   border: none;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
   border-radius: 5px;
-  background: #0c0c0c;
-  color: rgb(29, 8, 165);
   cursor: pointer;
 }
 
-button:hover {
-  background: #f4ecec;
+.botoes-acessibilidade button:hover {
+  background-color: #d4af37;
+  color: #000;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+  border-top: 5px solid #d4af37;
+}
+
+body.contraste {
+  background-color: #000;
+  color: #fff;
 }

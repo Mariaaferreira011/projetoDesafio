@@ -1,7 +1,33 @@
-const botao = document.getElementById("botao");
-const descricao = document.getElementById("descricao");
+const contrasteBtn = document.getElementById('contraste');
+const vozBtn = document.getElementById('voz');
+const aumentarBtn = document.getElementById('aumentar');
+const diminuirBtn = document.getElementById('diminuir');
 
-botao.addEventListener("click", function() {
-  descricao.textContent = "Marcou gols como o da vitória sobre o São Paulo em clássicos e gols decisivos em partidas do Campeonato Paulista e Brasileiro. Seus chutes precisos e velocidade fizeram a torcida vibrar em várias ocasiões..";
-  botao.textContent = "Texto atualizado!";
+let tamanhoFonte = 16;
+
+// Modo alto contraste
+contrasteBtn.addEventListener('click', () => {
+  document.body.classList.toggle('contraste');
 });
+
+// Aumentar e diminuir fonte
+aumentarBtn.addEventListener('click', () => {
+  tamanhoFonte += 2;
+  document.body.style.fontSize = `${tamanhoFonte}px`;
+});
+
+diminuirBtn.addEventListener('click', () => {
+  if (tamanhoFonte > 12) {
+    tamanhoFonte -= 2;
+    document.body.style.fontSize = `${tamanhoFonte}px`;
+  }
+});
+
+// Leitor de voz
+vozBtn.addEventListener('click', () => {
+  const texto = document.body.innerText;
+  const msg = new SpeechSynthesisUtterance(texto);
+  msg.lang = 'pt-BR';
+  window.speechSynthesis.speak(msg);
+});
+
