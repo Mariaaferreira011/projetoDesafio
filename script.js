@@ -1,33 +1,67 @@
-const contrasteBtn = document.getElementById('contraste');
-const vozBtn = document.getElementById('voz');
-const aumentarBtn = document.getElementById('aumentar');
-const diminuirBtn = document.getElementById('diminuir');
+function mostrarMensagem() {
+  alert("Bem-vinda à PinkStyle! Confira nossos lançamentos 💗");
+}
 
-let tamanhoFonte = 16;
+/* ============================
+      VARIÁVEIS DO CARRINHO
+============================ */
+let carrinho = [];
 
-// Modo alto contraste
-contrasteBtn.addEventListener('click', () => {
-  document.body.classList.toggle('contraste');
-});
+let modal = document.getElementById("carrinhoModal");
+let pagamentoModal = document.getElementById("pagamentoModal");
 
-// Aumentar e diminuir fonte
-aumentarBtn.addEventListener('click', () => {
-  tamanhoFonte += 2;
-  document.body.style.fontSize = `${tamanhoFonte}px`;
-});
+let btnCarrinho = document.getElementById("btnCarrinho");
+let fechar = document.getElementById("fecharCarrinho");
+let fecharPagamento = document.getElementById("fecharPagamento");
 
-diminuirBtn.addEventListener('click', () => {
-  if (tamanhoFonte > 12) {
-    tamanhoFonte -= 2;
-    document.body.style.fontSize = `${tamanhoFonte}px`;
+let itensCarrinho = document.getElementById("itensCarrinho");
+let totalTexto = document.getElementById("total");
+
+/* ============================
+      ABRIR / FECHAR MODAL
+============================ */
+btnCarrinho.onclick = () => modal.style.display = "block";
+fechar.onclick = () => modal.style.display = "none";
+fecharPagamento.onclick = () => pagamentoModal.style.display = "none";
+
+window.onclick = function(e) {
+  if (e.target === modal) modal.style.display = "none";
+  if (e.target === pagamentoModal) pagamentoModal.style.display = "none";
+};
+
+/* ============================
+      ADICIONAR AO CARRINHO
+============================ */
+function addCarrinho(produto, preco) {
+  carrinho.push({ produto, preco });
+  atualizarCarrinho();
+  alert(produto + " adicionado ao carrinho!");
+}
+
+/* ============================
+      ATUALIZAR CARRINHO
+============================ */
+function atualizarCarrinho() {
+  itensCarrinho.innerHTML = "";
+  let total = 0;
+
+  carrinho.forEach(item => {
+    itensCarrinho.innerHTML += `<li>${item.produto} — R$ ${item.preco.toFixed(2)}</li>`;
+    total += item.preco;
+  });
+
+  totalTexto.textContent = "Total: R$ " + total.toFixed(2);
+}
+
+/* ============================
+      FINALIZAR COMPRA
+============================ */
+function finalizarCompra() {
+  if (carrinho.length === 0) {
+    alert("Seu carrinho está vazio!");
+    return;
   }
-});
 
-// Leitor de voz
-vozBtn.addEventListener('click', () => {
-  const texto = document.body.innerText;
-  const msg = new SpeechSynthesisUtterance(texto);
-  msg.lang = 'pt-BR';
-  window.speechSynthesis.speak(msg);
-});
-
+  modal.style.display = "none";
+  pagamentoModal.style.display = "block";
+}

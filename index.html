@@ -1,83 +1,143 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sport Club Corinthians Paulista</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PinkStyle - Moda Feminina</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="https://logodetimes.com/times/corinthians/logo-corinthians-2048.png" alt="Escudo do Corinthians" class="logo">
-    <h1>Sport Club Corinthians Paulista</h1>
-    <p class="slogan">“O Time do Povo, o Campeão dos Campeões”</p>
-  </header>
 
-  <nav>
-    <ul>
-      <li><a href="#historia">História</a></li>
-      <li><a href="#momentos">Momentos Marcantes</a></li>
-      <li><a href="#torcida">Torcida</a></li>
-      <li><a href="#estadio">Arena</a></li>
-      <li><a href="#acessibilidade">Acessibilidade</a></li>
-    </ul>
-  </nav>
+    <header class="topo">
+        <h1>PinkStyle</h1>
+        <nav>
+            <ul>
+                <li><a href="#novidades">Novidades</a></li>
+                <li><a href="#colecao">Coleção</a></li>
+                <li><a href="#promocoes">Promoções</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a id="btnCarrinho" style="cursor:pointer;">🛒 Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <section id="historia" class="secao">
-      <h2>🏟 História do Corinthians</h2>
-      <p>O Sport Club Corinthians Paulista foi fundado em 1º de setembro de 1910 por um grupo de operários do bairro do Bom Retiro, em São Paulo. Inspirados no time inglês Corinthian FC, eles criaram um clube que representasse o povo trabalhador — nascia o “Time do Povo”.</p>
-      <p>O Corinthians conquistou seu primeiro título em 1914 e, desde então, tornou-se um dos clubes mais vitoriosos e amados do Brasil.</p>
-      <img src="https://i.imgur.com/zE9F3Zy.jpg" alt="Primeiro time do Corinthians em 1910" class="foto">
+    <section class="destaque">
+        <h2>Moda Feminina • Estilo • Elegância</h2>
+        <p>As roupas que combinam com a sua personalidade 💗</p>
+        <button onclick="mostrarMensagem()">Comprar Agora</button>
     </section>
 
-    <section id="momentos" class="secao">
-      <h2>🏆 Momentos Marcantes</h2>
-      <ul>
-        <li><strong>1977:</strong> O fim do jejum com o título paulista após 23 anos.</li>
-        <li><strong>1982-1984:</strong> Democracia Corinthiana — Sócrates, Casagrande e Wladimir mudaram o futebol brasileiro.</li>
-        <li><strong>2000:</strong> Campeão do primeiro Mundial de Clubes da FIFA.</li>
-        <li><strong>2012:</strong> Campeão invicto da Libertadores e bicampeão mundial sobre o Chelsea.</li>
-        <li><strong>2017:</strong> Campeão Brasileiro com a Fiel em festa.</li>
-      </ul>
-      <img src="https://i.imgur.com/LbOGtJp.jpg" alt="Corinthians campeão mundial 2012" class="foto">
+    <!-- ========== NOVOS PRODUTOS ========== -->
+    <section id="novidades" class="secao">
+        <h2>Novidades</h2>
+
+        <div class="produtos">
+
+            <div class="card">
+                <img src="https://dondoca.com.br/wp-content/uploads/2020/10/dondoca_com_br-vestido-longo-floral-pink-img-0974-768x768.jpg">
+                <h3>Vestido Floral Rosa</h3>
+                <p>R$ 129,90</p>
+                <button onclick="addCarrinho('Vestido Floral Rosa', 129.90)">Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvD0fxhkVBIlyZVBvNDwCLLEE43hrVFwRyqQ&s">
+                <h3>Jaqueta Jeans Feminina</h3>
+                <p>R$ 189,90</p>
+                <button onclick="addCarrinho('Jaqueta Jeans Feminina', 189.90)">Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="https://www.lotfitness.com.br/app-lotfitness/assets/images/dinamica/produto/229/cor_0/home/xtp083r-top-feminino-rosa-fucsia-fitness-poliamida-academia-decote-reto-100124-902fcc.jpg.pagespeed.ic.wfLWaic3dC.jpg">
+                <h3>Conjunto Fitness Rosa</h3>
+                <p>R$ 99,90</p>
+                <button onclick="addCarrinho('Conjunto Fitness Rosa', 99.90)">Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_935880-MLB85356727858_062025-O-vestido-casual-midi-sobreposico-manga-curta-elegante.webp">
+                <h3>Vestido Casual Elegante</h3>
+                <p>R$ 149,90</p>
+                <button onclick="addCarrinho('Vestido Casual Elegante', 149.90)">Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ5eou8dzs7x7Yw_w5tkM-_WTw_Ua2onec2g&s">
+                <h3>Cropped Rosa Pastel</h3>
+                <p>R$ 59,90</p>
+                <button onclick="addCarrinho('Cropped Rosa Pastel', 59.90)">Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="https://averarabrand.com.br/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/b/t/btsl0106_8_.jpg">
+                <h3>Saia Plissada Rosa</h3>
+                <p>R$ 89,90</p>
+                <button onclick="addCarrinho('Saia Plissada Rosa', 89.90)">Comprar</button>
+            </div>
+
+        </div>
     </section>
 
-    <section id="torcida" class="secao">
-      <h2>🖤 A Fiel Torcida</h2>
-      <p>A Fiel é a alma do Corinthians. Reconhecida por sua lealdade, paixão e presença em qualquer estádio, a torcida é considerada o 12º jogador do Timão.</p>
-      <img src="https://i.imgur.com/f7JfGvN.jpg" alt="Torcida do Corinthians" class="foto">
+    <!-- ========== PROMOÇÕES ========== -->
+    <section id="promocoes" class="secao">
+        <h2>Promoções</h2>
+
+        <div class="produtos">
+
+            <div class="card">
+                <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lq3h1bru43dz70">
+                <h3>Blusa Estampada</h3>
+                <p><s>R$ 79,90</s> R$ 49,90</p>
+                <button onclick="addCarrinho('Blusa Estampada', 49.90)">Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="https://images.tcdn.com.br/img/img_prod/771710/calca_jeans_skinny_com_elastano_8707_1_a1439dad1fac44d8eb89db3d906a7f6b.jpg">
+                <h3>Calça Jeans Skinny</h3>
+                <p><s>R$ 129,90</s> R$ 89,90</p>
+                <button onclick="addCarrinho('Calça Jeans Skinny', 89.90)">Comprar</button>
+            </div>
+
+            <div class="card">
+            <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8mohhhuxnn52f">
+                <h3>Moletom Rosa Conforto</h3>
+                <p><s>R$ 159,90</s> R$ 109,90</p>
+                <button onclick="addCarrinho('Moletom Rosa Conforto', 109.90)">Comprar</button>
+            </div>
+
+        </div>
     </section>
 
-    <section id="estadio" class="secao">
-      <h2>🏟 Arena Corinthians</h2>
-      <p>Inaugurada em 2014, a Neo Química Arena é uma das mais modernas da América do Sul. Foi palco da abertura da Copa do Mundo de 2014 e é o orgulho da Fiel Torcida.</p>
-      <img src="https://i.imgur.com/udvUyrk.jpg" alt="Neo Química Arena" class="foto">
-    </section>
+    <footer id="contato">
+        <h3>Contato</h3>
+        <p>Email: atendimento@pinkstyle.com</p>
+        <p>Instagram: @pinkstyleoficial</p>
+    </footer>
 
-    <section id="acessibilidade" class="secao">
-      <h2>🦾 Acessibilidade</h2>
-      <p>O site do Corinthians é inclusivo e acessível, com recursos especiais para todos os torcedores:</p>
-      <ul>
-        <li>🕶️ Modo alto contraste</li>
-        <li>🔊 Leitura de texto por voz</li>
-        <li>🔍 Controle de tamanho de fonte</li>
-        <li>⌨️ Navegação por teclado</li>
-      </ul>
-      <div class="botoes-acessibilidade">
-        <button id="contraste">Alto Contraste</button>
-        <button id="voz">Ler Texto</button>
-        <button id="aumentar">Aumentar Fonte</button>
-        <button id="diminuir">Diminuir Fonte</button>
-      </div>
-    </section>
-  </main>
+    <!-- ========== MODAL DO CARRINHO ========== -->
+    <div id="carrinhoModal" class="modal">
+        <div class="modal-content">
+            <span id="fecharCarrinho">&times;</span>
+            <h2>Carrinho</h2>
+            <ul id="itensCarrinho"></ul>
+            <p id="total">Total: R$ 0,00</p>
+            <button class="finalizar" onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 Sport Club Corinthians Paulista — Todos os direitos reservados.</p>
-  </footer>
+    <!-- ========== MODAL PAGAMENTO ========== -->
+    <div id="pagamentoModal" class="modal">
+        <div class="modal-content">
+            <span id="fecharPagamento">&times;</span>
+            <h2>Método de Pagamento</h2>
 
-  <script src="script.js"></script>
+            <button class="finalizar" onclick="alert('Compra finalizada com PIX!')">PIX</button>
+            <button class="finalizar" onclick="alert('Compra finalizada no Cartão!')">Cartão</button>
+            <button class="finalizar" onclick="alert('Compra finalizada no Boleto!')">Boleto</button>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
->
